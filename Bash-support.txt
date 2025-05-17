@@ -1,0 +1,20 @@
+python prime_factor_inference.py --model output/20250412-123456/best_model.pth --number 0xabc123... --gpu
+python model_loader.py --model finetuned_output/20250416-145737/best_model.pth --data products_primes_shuffled.csv --samples 10
+
+python model_loader.py \
+ --model output/20250412-102901/best_model.pth \
+ --data hex_products_primes_shuffled.csv
+
+python prime_factor_inference.py \
+--model output/20250412-102901/best_model.pth \
+--number 0x9178f6933554bf7433295e27bf168459bb9785c0ff71a5a955199c9afd6c1e12d1663d3ce9db4e4c0b280be33c1da7032e480575407de1ede98cc51d8bbfa5a3e439ff43730a34769edf370a7da53e64b725e8bae44effdb77d9c5e933286642131c16a769b67ae17c92f25966b72e3f342ecac42c769b9f6e22c34c47a9858d \
+--gpu
+
+0x9178f6933554bf7433295e27bf168459bb9785c0ff71a5a955199c9afd6c1e12d1663d3ce9db4e4c0b280be33c1da7032e480575407de1ede98cc51d8bbfa5a3e439ff43730a34769edf370a7da53e64b725e8bae44effdb77d9c5e933286642131c16a769b67ae17c92f25966b72e3f342ecac42c769b9f6e22c34c47a9858d
+ad9683d7e740a54bee50752a2f17c6cdbf418b33ec68fd4338a3e8ddf3a2e0e65ea6b86bfba10d38d057f33e79bb2fa7ed25212b35adec5052ba3dc3af906079
+d6895ca256c91b408df5f099473aadaa4e453563a17cab8c708c2abef6c5eb224ce7e95c0abd3577bc086b0170dcf526675ad5741982039e9f7225e68b0bd0b5
+//upload dataset
+# Upload the dataset to Hugging Face Hub
+
+HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli upload --repo-type dataset maxhirez/large-hex-prime-factor-dataset hex_products_primes_large_shuffled_aa.csv
+HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli upload --repo-type dataset maxhirez/large-hex-prime-factor-dataset hex_products_primes_large_shuffled_ab.csv
