@@ -23,4 +23,4 @@ ShorNet was conceived as a project for learning about neural networks and crypto
 
 -**pytorch_prime_factorization.py**: Main training script
 
--**requirements.txt**: Conda environment requirements
+-**requirements.txt**: Conda environment requirements.  (Note: all scripts use Apple Metal Performance Shaders with fallback to CPU. Please fork to use with CUDA.)
